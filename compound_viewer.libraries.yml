@@ -1,0 +1,5 @@
+
+basic:
+  version: 1.x
+  css:
+    css/compound_viewer.css: {} 

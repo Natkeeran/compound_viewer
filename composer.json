@@ -1,0 +1,13 @@
+{
+    "name": "compound_viewer",
+    "type": "drupal-module",
+    "description": "Compound Viewer Utils",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/compound_viewer",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/compound_viewer",
+        "source": "http://cgit.drupalcode.org/compound_viewer"
+    }
+}
