@@ -1,5 +1,5 @@
 
-basic:
-  version: 1.x
+compound_viewer.exposed_filter:
   css:
-    css/compound_viewer.css: {} 
+    component:
+      css/compound_viewer.css: {}

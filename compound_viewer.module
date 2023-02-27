@@ -37,7 +37,7 @@ function compound_viewer_views_pre_view($view, string $display_id, array $args) 
     $nid = $node->id();
 
     // Get the compound view
-    $view_children = Views::getView('compound_children');
+    $view_children = Views::getView('compound_object_members');
     $view_children->setDisplay('block_1');
     $view_children->setArguments([$nid]);
     $view_children->execute();
@@ -45,10 +45,10 @@ function compound_viewer_views_pre_view($view, string $display_id, array $args) 
     $view_result = $view_children->result;
 
     // Get the media id of the compound object
-    $media_id = "";
+    $node_id = "";
     if (!empty($view_result)) {
       foreach ($view_result as $row) {
-        $media_id = $row->nid;
+        $node_id = $row->nid;
         break;
       }
     }
@@ -56,12 +56,13 @@ function compound_viewer_views_pre_view($view, string $display_id, array $args) 
     // Set the default media when first going to the compound object
     $exposed_input = $view->getExposedInput();
     $current_uri = \Drupal::request()->getRequestUri();
-    \Drupal::logger('my_module')->notice($current_uri);
 
-    if (!str_contains($current_uri, 'field_media_of_target_id')) {
-      $exposed_input['field_media_of_target_id'] = $media_id;
+    if (!str_contains($current_uri, 'compound_member_node_id')) {
+      $exposed_input['compound_member_node_id'] = $node_id;
       $view->setExposedInput($exposed_input);
     }
+
+    $view->element['#attached']['library'][] = 'compound_viewer/compound_viewer.exposed_filter';
 
   }
 }
