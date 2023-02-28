@@ -3,3 +3,5 @@ compound_viewer.exposed_filter:
   css:
     component:
       css/compound_viewer.css: {}
+  js:
+    js/member_heightlight.js: {}

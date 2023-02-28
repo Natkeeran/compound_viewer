@@ -44,7 +44,7 @@ function compound_viewer_views_pre_view($view, string $display_id, array $args) 
 
     $view_result = $view_children->result;
 
-    // Get the media id of the compound object
+    // Get the first member node id of the compound object
     $node_id = "";
     if (!empty($view_result)) {
       foreach ($view_result as $row) {
@@ -53,7 +53,7 @@ function compound_viewer_views_pre_view($view, string $display_id, array $args) 
       }
     }
 
-    // Set the default media when first going to the compound object
+    // Set the default node when first going to the compound object
     $exposed_input = $view->getExposedInput();
     $current_uri = \Drupal::request()->getRequestUri();
 

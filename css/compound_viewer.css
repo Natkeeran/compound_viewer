@@ -1,3 +1,27 @@
 #views-exposed-form-playlist-item-media-block-1 {
   display: none;
 }
+
+#block-views-block-compound-object-members-block-1 .view-content {
+  border: 1px solid #e5e5e5;
+}
+
+#block-views-block-compound-object-members-block-1 .views-view-grid__item-inner {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#block-views-block-compound-object-members-block-1 .views-view-grid__item-inner img {
+  margin: 0 auto;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.compound_member_selected {
+  border: 2px solid #0f6292;
+}
