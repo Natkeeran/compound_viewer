@@ -9,5 +9,8 @@
     "support": {
         "issues": "https://www.drupal.org/project/issues/compound_viewer",
         "source": "http://cgit.drupalcode.org/compound_viewer"
+    },
+    "require": {
+        "islandora/islandora": "^2"
     }
 }
